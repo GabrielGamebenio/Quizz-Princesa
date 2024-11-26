@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branca de neve</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div  id="perguntas">
+    <h1>O seu resultado é Branca</h1>
+    <h1 id="porcentagem"></h1>
+    <div id="imagem_branca1">
+
+    <script>
+        let bela = Number(localStorage.getItem('contBela'))
+        let branca = Number(localStorage.getItem('ContBranca'))
+        let frozen = Number(localStorage.getItem('ContFrozen'))
+        let vanellope= Number(localStorage.getItem('ContVanellope'))
+            
+        let total = bela+branca+vanellope+frozen
+        let porc = (branca/total)*100
+    
+        console.log(total)
+        console.log(bela)
+        console.log(branca)
+        console.log(frozen)
+        console.log(vanellope)
+        document.getElementById('porcentagem').innerHTML = porc + ' %'
+    </script>
+</body>
+</html>
